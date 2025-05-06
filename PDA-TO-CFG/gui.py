@@ -202,6 +202,11 @@ class MainWindow:
         graph.attr('graph', rankdir='LR', size='8,5', bgcolor='transparent')
         graph.attr('node', fontcolor='white', fontname='Arial')
         graph.attr('edge', fontcolor='white', fontname='Arial')
+        
+        # Add PDF-specific attributes for black background
+        graph.attr('graph', _attributes={'bgcolor': '#000000'})  # Black background for PDF
+        graph.attr('node', _attributes={'color': '#ff9600', 'fontcolor': 'white'})
+        graph.attr('edge', _attributes={'color': '#ff9600', 'fontcolor': 'white'})
 
         # Initial state with arrow
         graph.attr('node', shape='plaintext', color='#ff9600')
